@@ -1,0 +1,292 @@
+Q.1.    def is_magic_number(number):
+            # Convert the number to a string
+    number_str = str(number)
+
+    # Check if the string is equal to its reverse
+    if number_str == number_str[::-1]:
+        return "YES"
+    else:
+        return "NO"
+
+
+# Take input from the user
+num = int(input("Enter a number to check if it's a magic number: "))
+
+# Check if the number is a magic number
+result = is_magic_number(num)
+
+print(result)
+
+
+Q.4.      
+#Creating Empty Sets
+a=set()
+b=set()
+
+#Adding even no. into set a
+for i in range(1,10):
+    if(i%2==0):
+        a.add(i)
+        
+#Addding composite no. into set b
+n=0
+for j in range(4,20):
+    for k in range(2,j):
+        if(j%k==0):
+            b.add(j)
+        else:
+            continue
+
+#Checking sets by printing them
+print("Sets are")
+print("Set a is:",a)
+print("Set b is:",b)
+print("\n")
+
+#Demonstrating all()
+print("Demonstrating all()")
+print("All elements of set a are true:",all(a))
+print("All elements of set b are true:",all(b))
+print("\n")
+
+#Demonstrating issuperset()
+print("Demonstrating issuperset()")
+print("b is the superset of a:",b.issuperset(a))
+print("a is the superset of b:",a.issuperset(b))
+print("\n")
+
+#Demonstrating len()
+print("Demonstrating len()")
+print("Length of set a:",len(a))
+print("Length of set a:",len(b))
+print("\n")
+
+#Demonstrating sum()
+print("Demonstrating sum()")
+print("Sum of elements in set a:",sum(a))
+print("Sum of elements in set b:",sum(b))
+print("\n")
+
+
+Q.6.    
+#Creating Empty Sets
+a=set()
+b=set()
+
+#Addding prime no. into set a
+for i in range(5000,6000):
+    count=0
+    for j in range(2,i//2):
+        if(i%j==0):
+            count=count+1
+            break          
+    if(count==0):
+        a.add(i)
+        
+#Adding odd no. into set b
+for k in range(5000,6000):
+    if(k%2!=0):
+        b.add(k)
+        
+
+#Checking sets by printing them
+print("Set a is:",a)
+print("\n")
+print("Set b is:",b)
+print("\n")
+
+#Demonstrating union()
+print("Demonstrating union()")
+print("a.union(b):",a.union(b))
+print("\n")
+print("b.union(a):",b.union(a))
+print("\n")
+
+#Demonstrating intersection()
+print("Demonstrating intersection()")
+print("a.intersection(b):",a.intersection(b))
+print("\n")
+print("b.intersection(a)",b.intersection(a))
+print("\n")
+
+#Demonstrating difference()
+print("Demonstrating difference()")
+print("a.difference(b)",a.difference(b))
+print("\n")
+print("b.difference(a)",b.difference(a))
+print("\n")
+
+#Demonstrating symmetric_difference()
+print("Demonstrating symmetric_difference()")
+print("a.symmetric_difference(b)",a.symmetric_difference(b))
+print("\n")
+print("b.symmetric_difference(a)",b.symmetric_difference(a))
+print("\n")
+
+
+
+Q.11.
+Tc=int(input("Enter the number of testcases:"))
+s=[]
+for w in range(Tc):
+    string=input()
+    s.append(string)
+    
+print(s)
+
+# s=["11000110101","110010001","11110000"]
+for i in s:
+    count0=0
+    count1=0
+    removed=0
+    k=0
+    for j in i:
+        if j[k]=="0":
+            count0+=1
+        elif j[k]=="1":
+            count1+=1
+    
+    if count0<count1:
+        removed+=count0
+        count0=0
+        for j in i:
+            if j[k]=="0":
+                j.replace('0','')
+    
+    elif count1<count0:
+        removed+=count1
+        count1=0
+        for j in i:
+            if j[k]=="1":
+                j.replace('1','')
+                
+    elif count0 == count1:
+        removed=0
+        
+    k+=1
+    
+    print(removed)
+
+
+Tc=int(input("Enter the number of testcases:"))
+s=[]
+for w in range(Tc):
+    string=input()
+    s.append(string)
+    
+print(s)
+
+# s=["11000110101","110010001","11110000"]
+for i in s:
+    count0=0
+    count1=0
+    removed=0
+    k=0
+    for j in i:
+        if j[k]=="0":
+            count0+=1
+        elif j[k]=="1":
+            count1+=1
+    
+    if count0<count1:
+        removed+=count0
+        count0=0
+        for j in i:
+            if j[k]=="0":
+                j.replace('0','')
+    
+    elif count1<count0:
+        removed+=count1
+        count1=0
+        for j in i:
+            if j[k]=="1":
+                j.replace('1','')
+                
+    elif count0 == count1:
+        removed=0
+        
+    k+=1
+    
+    print(removed)
+Tc=int(input("Enter the number of testcases:"))
+s=[]
+for w in range(Tc):
+    string=input()
+    s.append(string)
+    
+print(s)
+
+# s=["11000110101","110010001","11110000"]
+for i in s:
+    count0=0
+    count1=0
+    removed=0
+    k=0
+    for j in i:
+        if j[k]=="0":
+            count0+=1
+        elif j[k]=="1":
+            count1+=1
+    
+    if count0<count1:
+        removed+=count0
+        count0=0
+        for j in i:
+            if j[k]=="0":
+                j.replace('0','')
+    
+    elif count1<count0:
+        removed+=count1
+        count1=0
+        for j in i:
+            if j[k]=="1":
+                j.replace('1','')
+                
+    elif count0 == count1:
+        removed=0
+        
+    k+=1
+    
+    print(removed)
+Tc=int(input("Enter the number of testcases:"))
+s=[]
+for w in range(Tc):
+    string=input()
+    s.append(string)
+    
+print(s)
+
+# s=["11000110101","110010001","11110000"]
+for i in s:
+    count0=0
+    count1=0
+    removed=0
+    k=0
+    for j in i:
+        if j[k]=="0":
+            count0+=1
+        elif j[k]=="1":
+            count1+=1
+    
+    if count0<count1:
+        removed+=count0
+        count0=0
+        for j in i:
+            if j[k]=="0":
+                j.replace('0','')
+    
+    elif count1<count0:
+        removed+=count1
+        count1=0
+        for j in i:
+            if j[k]=="1":
+                j.replace('1','')
+                
+    elif count0 == count1:
+        removed=0
+        
+    k+=1
+    
+    print(removed)
+
+
